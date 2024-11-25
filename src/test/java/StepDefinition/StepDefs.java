@@ -6,6 +6,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
@@ -48,6 +49,7 @@ public class StepDefs {
 	public void tearDown() throws Exception {
 		if(scenario.isFailed()) {
 			scenario.attach(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES), "image/png", "Error Screenshot");
+			
 			driver.quit();
 			driver=null;
 		}
