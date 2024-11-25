@@ -49,8 +49,7 @@ public class StepDefs {
 	public void tearDown() throws Exception {
 		if(scenario.isFailed()) {
 			scenario.attach(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES), "image/png", "Error Screenshot");
-
-			System.out.println("Error Screenshot captured");
+			System.out.println("Error");
 			driver.quit();
 			driver=null;
 		}
@@ -59,6 +58,7 @@ public class StepDefs {
 	@Given("user opens the browser")
 	public void userOpensTheBrowser() {
 		driver.manage().window().maximize();
+		System.out.println("Maximised");
 	}
 
 	@When("user navigates to url")
