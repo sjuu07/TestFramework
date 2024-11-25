@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 25 18:57:34 IST 2024</td>
+<td>Started on:</td><td>Mon Nov 25 23:40:38 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16003 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34403 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,30 +77,34 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='CucumberExecutor.TestRunner.runScenario()'><b>runScenario</b><br>Test class: CucumberExecutor.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that a new user log in, and place an order", "Navigate to a URL"</td>
-<td><div><pre>java.lang.AssertionError: expected [test_011] but found [test_01]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at PageObjects.LoginPage.verifyTitle(LoginPage.java:35)
-	at StepDefinition.StepDefs.thePageTitleShouldContain(StepDefs.java:73)
-	at ✽.verify the page title(file:///C:/Users/juhim/eclipse-workspace/AutomationPOC/src/test/resources/Features/Launch.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace715027790", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace715027790'><pre>java.lang.AssertionError: expected [test_011] but found [test_01]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at PageObjects.LoginPage.verifyTitle(LoginPage.java:35)
-	at StepDefinition.StepDefs.thePageTitleShouldContain(StepDefs.java:73)
-	at ✽.verify the page title(file:///C:/Users/juhim/eclipse-workspace/AutomationPOC/src/test/resources/Features/Launch.feature:8)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(@class,&apos;hi-user&apos;)])[last()] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.86 (ee338c5c68e9..., userDataDir: C:\Users\juhim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62023}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62023/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 911f061f21916ef877f2bcef7cac25a5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at Utils.ElementActions.performVisibleWait(ElementActions.java:20)
+	at PageObjects.LoginPage.verifyTitle(LoginPage.java:34)
+	at StepDefinition.StepDefs.thePageTitleShouldContain(StepDefs.java:76)
+	at ✽.verify the page title(file:///C:/Users/juhim/eclipse-workspace/TestFramework/src/test/resources/Features/Launch.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1894686001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1894686001'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(@class,&apos;hi-user&apos;)])[last()] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.86 (ee338c5c68e9..., userDataDir: C:\Users\juhim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62023}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62023/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 911f061f21916ef877f2bcef7cac25a5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at Utils.ElementActions.performVisibleWait(ElementActions.java:20)
+	at PageObjects.LoginPage.verifyTitle(LoginPage.java:34)
+	at StepDefinition.StepDefs.thePageTitleShouldContain(StepDefs.java:76)
+	at ✽.verify the page title(file:///C:/Users/juhim/eclipse-workspace/TestFramework/src/test/resources/Features/Launch.feature:8)
 </pre></div></td>
-<td>13</td>
-<td>CucumberExecutor.TestRunner@2dfaea86</td></tr>
+<td>30</td>
+<td>CucumberExecutor.TestRunner@f79e</td></tr>
 </table><p>
 </body>
 </html>

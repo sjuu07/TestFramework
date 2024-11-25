@@ -6,9 +6,9 @@
       <class name="CucumberExecutor.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
           <include name="closeBrowser"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- CucumberExecutor.TestRunner -->
