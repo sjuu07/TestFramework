@@ -73,7 +73,7 @@ public class StepDefs {
 
 	@Then("verify the page title")
 	public void thePageTitleShouldContain(){
-		scenario.log("Title : "+lp.verifyTitle(DBManager.testData.get("username")));
+		scenario.log("Page Title : "+lp.verifyTitle(DBManager.testData.get("username")));
 	}
 
 }
