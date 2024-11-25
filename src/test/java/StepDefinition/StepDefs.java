@@ -58,6 +58,7 @@ public class StepDefs {
 	@Given("user opens the browser")
 	public void userOpensTheBrowser() {
 		driver.manage().window().maximize();
+		System.out.println("Maximised");
 	}
 
 	@When("user navigates to url")
