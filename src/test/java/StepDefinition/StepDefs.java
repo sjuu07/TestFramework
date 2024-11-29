@@ -51,7 +51,7 @@ public class StepDefs {
 			scenario.attach(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES), "image/png", "Error Screenshot");
 			
 			driver.quit();
-			System.out.println("Browser TearDown");
+			
 			driver=null;
 		}
 	}
