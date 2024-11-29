@@ -49,9 +49,7 @@ public class StepDefs {
 	public void tearDown() throws Exception {
 		if(scenario.isFailed()) {
 			scenario.attach(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES), "image/png", "Error Screenshot");
-			
 			driver.quit();
-			
 			driver=null;
 		}
 	}
